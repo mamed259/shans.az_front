@@ -19,8 +19,6 @@
     <!-- injector:css -->
     <link rel="stylesheet" href="css/design.min.css">
     
-    <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
-    
     
     <!-- endinjector -->
     
@@ -28,11 +26,10 @@
     <script src="js/min/assets/jquery.min.js"></script>
     <script src="js/min/assets/bootstrap.min.js"></script>
     <script src="js/min/assets/flatpickr.min.js"></script>
-    <script src="js/min/assets/dropzone.min.js"></script>
     <script src="js/min/assets/jquery.nice-select.min.js"></script>
     <script src="js/min/assets/jquery.fancybox.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/min/assets/inputmask.min.js"></script>
+    <script src="js/min/assets/select2.min.js"></script>
     
     <script src="js/min/app.min.js"></script>
     
@@ -116,6 +113,27 @@
     </div>
 </div>
 
+<!-- Forget Password -->
+<div class="modal fade modal-login" id="modal_forget_pass" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Şifrənin bərpası</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form form-login">
+                    <div class="form-group">
+                        <label for="login_mail2">Email</label>
+                        <input type="email" class="form-control" id="login_mail2">
+                    </div>
+                    <button type="submit" class="btn btn-sign-up-modal">Göndər</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <section class="section section-wrapper">
@@ -174,7 +192,6 @@
                                         <option value="4">Potato</option>
                                     </select>
                                 </div>
-
                                 <div class="col-12 col-lg-6 form-group">
                                     <select class="nice-select js-nice-select">
                                         <option value="1">Peshe</option>
@@ -183,7 +200,6 @@
                                         <option value="4">Potato</option>
                                     </select>
                                 </div>
-
                                 <div class="col-12 form-group">
                                     <div class="regist-multi">
                                         <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
@@ -206,8 +222,6 @@
                                     </div>
                                     
                                 </div>
-
-
                                 <div class="col-12 col-md-6 form-group">
                                     <div class="pass">
                                         <input id="password" type="password" class="form-control pass-eye" placeholder="Şifrə">
@@ -217,6 +231,13 @@
                                     <div class="pass">
                                         <input id="confirm_password" type="password" class="form-control pass-eye" placeholder="Şifrənin təkrarı">
                                     </div>
+                                </div>
+                                <div class="col-12 form-group form-group-checkbox">
+                                    <label class="checbox-label">
+                                        <span class="user-condition" data-toggle="modal" data-target="#modal_user_agreement">İstifadəçi şərtlərini</span> oxudum və razıyam
+                                        <input type="checkbox" value="İstifadəçi şərtlərini oxudum və razıyam" name="status" class="form-control-checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-registration">QEYDIYYAT</button>
@@ -229,6 +250,30 @@
     </div>
 </section>
 
+<div class="modal fade modal-info" id="modal_user_agreement" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-user" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">İstifadəçi razılaşması</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="agreement-box">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quas?
+                        <br>
+                        <br>
+                        Lorem ipsum dolor sit amet.
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae harum ipsa modi possimus quidem!
+                    </p>
+                </div>
+                <button class="btn btn-accept mt-4" data-dismiss="modal" aria-label="Close">Bagla</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script>
     $('#password, #confirm_password').on('keyup', function () {
@@ -237,21 +282,6 @@
         } else
             $('#message').removeClass('d-none')
     });
-
-    // $(".nice-search").click(function() {
-    //     $(this).find('.list').css('top', '90px');
-    //     if (!$(this).find('.nice-select').hasClass('open')){
-    //         $(this).append('<input type="text" class="form-control search-select" placeholder="Axtar">\n');
-    //     }
-    //     else{
-    //         $(".search-select").remove()
-    //     }
-    //
-    //     $(".search-select").click(function () {
-    //         $(this).parent().find('div').addClass('open');
-    //         console.log(2345678)
-    //     });
-    // });
 
         
     $(document).ready(function() {
@@ -272,7 +302,6 @@
         }
     });
 </script>
-
 
 
 <script>

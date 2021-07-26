@@ -46,6 +46,164 @@
 
 .modal{
 
+  &-info{
+
+    .modal-content{
+      padding: 25px;
+      border: none;
+      border-radius: 5px;
+      @include media-breakpoint-down(sm) {
+        //padding: 30px 20px;
+      }
+    }
+
+
+    .agreement-box{
+      border: 1px solid #D7DBE0;
+      border-radius: 4px;
+      padding: 15px 20px;
+
+      >p{
+        line-height: 24px;
+        font-size: 17px;
+        color: #454545;
+        margin-bottom: 0;
+
+        &+p{
+          margin-top: 20px;
+        }
+      }
+
+
+    }
+
+    .checbox-label{
+      font-family: pr_regular;
+      font-size: 16px;
+      line-height: 26px;
+      color: #62676E;
+      margin-top: 16px;
+      padding-left: 30px;
+    }
+
+    .modal-header{
+      border: none;
+      padding: 0;
+
+      .modal-title{
+        @extend .font-open-bold;
+        font-size: 22px;
+        line-height: 32px;
+        color: #2E3668;
+        margin-bottom: 20px;
+      }
+    }
+
+    .modal-body{
+      padding: 0;
+    }
+
+    .close{
+      padding: 9px;
+      position: relative;
+      top: 20px;
+      right: 10px;
+
+      &:after{
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 2px;
+        width: 17px;
+        transform: rotate(45deg);
+        background-color: #62676E;
+      }
+
+      &:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 2px;
+        width: 17px;
+        transform: rotate(-45deg);
+        background-color: #62676E;
+      }
+    }
+
+    .track-list{
+      border: 1px solid #D7DBE0;
+      border-radius: 4px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+
+      .track-item{
+
+        >p{
+          font-family: pr_medium;
+          font-size: 16px;
+          line-height: 23px;
+          text-align: center;
+          color: #000000;
+          margin: 22px 0 5px 0;
+        }
+
+        >span{
+          font-family: pr_regular;
+          font-size: 15px;
+          line-height: 22px;
+          text-align: center;
+          color: #000000;
+          display: block;
+        }
+
+        .track-icon{
+          width: 104px;
+          height: 104px;
+          background: #F4F8FB;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.active{
+          .track-icon{
+            position: relative;
+
+            &::after{
+              content: '';
+              background-image: url("../img/green-check.svg");
+              height: 24px;
+              width: 24px;
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -12px;
+              background-repeat: no-repeat;
+              margin: 0 auto;
+            }
+          }
+
+          .track-item {
+
+            > p {
+              font-family: pr_regular;
+              color: #000000;
+            }
+          }
+
+
+        }
+
+
+      }
+    }
+
+  }
+
+
   &-login{
 
     .modal-content{

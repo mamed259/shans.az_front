@@ -58,6 +58,20 @@
     }
   }
 
+  &-accept{
+    @extend .font-open-bold;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #ffffff;
+    height: 46px;
+    background: #c00027;
+    border-radius: 4px;
+    display: table;
+    margin: 0 auto;
+  }
+
+
+
   &-more{
     @extend .font-open-bold;
     font-size: 16px;

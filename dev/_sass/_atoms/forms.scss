@@ -387,4 +387,125 @@
     color: #c00027;
     cursor: pointer;
   }
-  
+
+
+.form-control-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked ~ .checkmark {
+
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.checbox-label {
+  display: inline-block;
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 0;
+  cursor: pointer;
+  @include box-shadow(none);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: pr_regular;
+  font-size: 16px;
+  line-height: 28px;
+  color: #62676E;
+
+  a{
+    font-family: pr_bold;
+    color: #62676E;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    @include abs-pos(0, auto, auto, 0);
+    @include size(24px, 24px);
+    background-color: $white;
+    border: 1px solid #D7DBE0;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .form-control-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark {
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  /* Style the checkmark/indicator */
+  .checkmark {
+    &::after {
+      left: 7px;
+      top: 3px;
+      width: 8px;
+      height: 12px;
+      border: solid #c00027;
+      border-width: 0px 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+
+      @include media-breakpoint-down(md) {
+        border-width: 0px 2px 2px 0;
+      }
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: $white;
+  border-radius: 50%;
+  border: 2px solid $black;
+}
+
+.user-condition{
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-decoration: underline;
+
+  &:active{
+    border: none;
+    outline: none;
+  }
+
+  &:focus{
+    border: none;
+    outline: none;
+  }
+}
