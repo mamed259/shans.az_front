@@ -1,0 +1,39 @@
+{
+  "name": "frontend-boilerplate",
+  "url": "https://github.com/mamed259/frontend-boilerplate",
+  "version": "0.1.0",
+  "description": "Fronend boilerplate for developing structures..",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "project",
+    "keywords",
+    "if",
+    "exist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamed259/frontend-boilerplate.git"
+  },
+  "author": "Mamed",
+  "authorUrl": "http://mamedhummatov.dev/",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "grunt": "^1.0.1",
+    "grunt-assemble": "^0.6.3",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-fontface": "^0.9.0",
+    "grunt-injector": "^1.1.0",
+    "grunt-newer": "^1.3.0"
+  }
+}

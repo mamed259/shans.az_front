@@ -1,0 +1,38 @@
+
+.card{
+  &-search{
+    margin-bottom: 30px;
+
+    .card-body{
+      padding: 15px 15px 0 15px;
+    }
+
+    .item-img{
+      height: 250px;
+      background-position: top center;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .card-name{
+      @extend .font-open-bold;
+      color: $black;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .card-text{
+      @extend .font-open-regular;
+      font-size: 16px;
+      line-height: 22px;
+      color: #000;
+    }
+    .card-locate{
+      @extend .font-open-regular;
+      font-size: 16px;
+      line-height: 22px;
+      color: #62676E;
+      margin: 0;
+    }
+  }
+}

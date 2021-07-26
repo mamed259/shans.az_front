@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="tags for website">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#ffffff">
+    <title> Tənzimləmələr </title>
+    
+    <!-- injector:css -->
+    <link rel="stylesheet" href="css/design.min.css">
+    
+    <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
+    
+    
+    <!-- endinjector -->
+    
+    <!-- injector:js -->
+    <script src="js/min/assets/jquery.min.js"></script>
+    <script src="js/min/assets/bootstrap.min.js"></script>
+    <script src="js/min/assets/flatpickr.min.js"></script>
+    <script src="js/min/assets/dropzone.min.js"></script>
+    <script src="js/min/assets/jquery.nice-select.min.js"></script>
+    <script src="js/min/assets/jquery.fancybox.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script src="js/min/app.min.js"></script>
+    
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav class="navbar navigation navbar-expand-lg">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <button class="btn btn-user d-lg-none" data-toggle="modal" data-target="#modal_login">
+                <img src="img/user.svg" alt="">
+            </button>
+
+            <div class="collapse navbar-collapse mobile-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto navbar-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana sehife</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="haqqimizda.html">Haqqimizda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Elaqe</a>
+                    </li>
+                    <li class="d-none-down-md">
+                        <button type="button" class="btn btn-user" data-toggle="modal" data-target="#modal_login">
+                            <img src="img/user.svg" alt="">
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-logout" href="index.html">Cixish</a>
+                    </li>
+                </ul>
+<!--                <ul class="navbar-nav navbar-login">-->
+<!--                    <li>-->
+<!--                        <button type="button" class="btn btn-user" data-toggle="modal" data-target="#modal_login">-->
+<!--                            <img src="/img/user.svg" alt="">-->
+<!--                        </button>-->
+<!--                    </li>-->
+<!--                </ul>-->
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<!-- Login -->
+<div class="modal fade modal-login" id="modal_login" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Şəxsi kabinetə giriş</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form form-login">
+                    <div class="form-group">
+                        <label for="login_mail1">Email</label>
+                        <input type="email" class="form-control" id="login_mail1">
+                    </div>
+                    <div class="form-group">
+                        <label for="login_pass">Şifrə</label>
+                        <input type="password" class="form-control" id="login_pass">
+                    </div>
+                    <a href="#" class="forgot-pass" data-dismiss="modal" data-toggle="modal" data-target="#modal_forget_pass">Şifrəni unutmusan?</a>
+                    <a href="profile.html" type="submit" class="btn btn-login-modal mb-3">Daxil ol</a>
+                    <a href="registration.html" type="submit" class="btn btn-sign-up-modal">Qeydiyyatdan keç</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="section section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-9 col-xl-12">
+                <div class="content-block">
+                    <h1 class="content-title">Tənzimləmələr</h1>
+                    <form class="form form-calculate">
+                        <div class="form-row">
+                            <div class="col-12 col-md-4 form-group">
+                                <input type="text" class="form-control readonly" placeholder="Ad">
+                            </div>
+                            <div class="col-12 col-md-4 form-group">
+                                <input type="text" class="form-control " placeholder="Soyad">
+                            </div>
+                            <div class="col-12 col-md-4 form-group">
+                                <input type="email" class="form-control readonly" placeholder="Email">
+                            </div>
+
+                            <div class="col-12 col-md-4 form-group readonly">
+                                <div class="datepicker-regist">
+                                    <input type="text" data-id="date" class="form-control date-input" placeholder="Doğum tarixi">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 form-group readonly">
+                                <select class="nice-select js-nice-select">
+                                    <option value="1">Cinsi</option>
+                                    <option value="2">Kishi</option>
+                                    <option value="3">Qadin</option>
+                                </select>
+                            </div>
+                            <div class="form-group cv-form-group col-md-4">
+                                <div class="button-wrap form-control">
+                                    <label class ="new-button" for="upload1">
+                                        <img src="img/input-5.svg" class="pr-2" alt="">
+                                        <span class="cv-inner">Profil şəkili</span>
+                                        <input id="upload1" class="input-upload" type="file" required>
+                                    </label>
+                                    <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 form-group">
+                                <select class="nice-select js-nice-select category-select">
+                                    <option value="1">Unvan</option>
+                                    <option value="2">Another option</option>
+                                    <option value="3">A disabled option</option>
+                                    <option value="4">Potato</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-4 form-group drop-category">
+                                <select class="nice-select js-nice-select">
+                                    <option value="1">Alt kategoria</option>
+                                    <option value="2">Another option</option>
+                                    <option value="3">A disabled option</option>
+                                    <option value="4">Potato</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-lg-4 form-group">
+                                <select class="nice-select js-nice-select">
+                                    <option value="1">Peshe</option>
+                                    <option value="2">Another option</option>
+                                    <option value="3">A disabled option</option>
+                                    <option value="4">Potato</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 form-group col-md-8">
+                                <div class="regist-multi">
+                                    <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 col-md-4 form-group">
+                                <div class="pass">
+                                    <input id="password" type="password" class="form-control pass-eye" placeholder="Kohne shifre">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 form-group">
+                                <div class="pass">
+                                    <input id="password" type="password" class="form-control pass-eye" placeholder="Yeni shifrə">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 form-group">
+                                <div class="pass">
+                                    <input id="confirm_password" type="password" class="form-control pass-eye" placeholder="Yeni shifrənin təkrarı">
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 col-md-4 form-group">
+                                <input type="text" class="form-control phone" placeholder="Mobil nomre">
+                            </div>
+                            <div class="col-12 col-lg-4 form-group">
+                                <select class="nice-select js-nice-select">
+                                    <option value="1">Ish tecrubesi</option>
+                                    <option value="2">0-6 ay</option>
+                                    <option value="3">1 il</option>
+                                    <option value="4">2 il</option>
+                                    <option value="5">3 il</option>
+                                    <option value="6">4 il</option>
+                                    <option value="7">5 il</option>
+                                    <option value="8">5+ il</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 form-group col-md-6">
+                                <div class="regist-multi">
+                                    <select class="js-example-basic-multiple-days" name="states[]" multiple="multiple">
+                                        <option value="WY">Bazar ertəsi</option>
+                                        <option value="WY">Çərşənbə axşamı</option>
+                                        <option value="WY">Çərşənbə</option>
+                                        <option value="WY">Cümə axşamı</option>
+                                        <option value="WY">Cümə</option>
+                                        <option value="WY">Şənbə</option>
+                                        <option value="WY">Bazar</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 form-group">
+                                <input class="days" type="text" placeholder="Saat"/>
+                            </div>
+
+
+                            <div class="col-12">
+                                <p class="pr-sec-title">Shekiller</p>
+                                <div class="form-row">
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload2">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 1</span>
+                                                <input id="upload2" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload3">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 2</span>
+                                                <input id="upload3" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload4">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 3</span>
+                                                <input id="upload4" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload5">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 4</span>
+                                                <input id="upload5" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload6">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 5</span>
+                                                <input id="upload6" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <p class="pr-sec-title">Sertifikatlar</p>
+                                <div class="form-row">
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class="new-button" for="upload7">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 1</span>
+                                                <input id="upload7" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload8">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 2</span>
+                                                <input id="upload8" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload9">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 3</span>
+                                                <input id="upload9" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload10">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 4</span>
+                                                <input id="upload10" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group cv-form-group col-6 col-md-4">
+                                        <div class="button-wrap form-control">
+                                            <label class ="new-button" for="upload11">
+                                                <img src="img/input-5.svg" class="pr-2" alt="">
+                                                <span class="cv-inner">Shəkil 5</span>
+                                                <input id="upload11" class="input-upload" type="file" required>
+                                            </label>
+                                            <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 form-group">
+                                <textarea class="form-control" placeholder="Ozunuz haqda melumat"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-registration">Yadda saxla</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-multiple').select2({
+            placeholder: "Peshe(alt kateoriya)",
+        });
+
+        $('.js-example-basic-multiple-days').select2({
+            placeholder: "Heftenin gunleri",
+        });
+
+        $('.drop-category').hide();
+
+        $(".category-select").change(function() {
+            console.log(this)
+            if ($(this).parent().find("div.category-select .list li.selected").attr('data-value') > 1){
+                $(this).parent().parent().parent().find('.drop-category').show()
+            }
+            else {
+                $(this).parent().parent().parent().find('.drop-category').hide()
+            }
+        });
+
+
+        var today = new Date()
+        var year = today.getFullYear()
+        var month = today.getMonth()
+        var day = today.getDate()
+        var finalDate = new Date(year - 18, month, day)
+
+        var date = $('[data-id="date"]');
+        var locale = $('html').attr('lang');
+
+        // Date
+        date.each(function () {
+            var _this = $(this);
+
+            _this.flatpickr({
+                "locale": locale,
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d",
+                disableMobile: true,
+                maxDate: finalDate
+            });
+        });
+
+
+    });
+
+
+</script>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Lorem 1</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Lorem 2</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Əlaqə</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            Ünvan və telefonlar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Online müraciət
+                        </a>
+                    </li>
+                </ul>
+                <ul class="f-list-social">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-rss-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="f-bottom">
+        © 2021 shans.az
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,246 @@
+---
+title: Qeydiyyat
+---
+
+<section class="section section-wrapper">
+    <div class="container">
+        <div class="row">
+                <div class="col-md-12 col-lg-9 col-xl-8 offset-xl-2">
+                    <div class="content-block">
+                        <h1 class="content-title">Qeydiyyat</h1>
+                        <form class="form form-calculate">
+                            <div class="form-row">
+                                <div class="col-12 col-md-6 form-group">
+                                    <input type="text" class="form-control" placeholder="Ad">
+                                </div>
+                                <div class="col-12 col-md-6 form-group">
+                                    <input type="text" class="form-control" placeholder="Soyad">
+                                </div>
+                                <div class="col-12 col-md-6 form-group">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                
+                                <div class="col-12 col-md-6 form-group">
+                                    <div class="datepicker-regist">
+                                        <input type="text" data-id="date" class="form-control date-input" placeholder="Doğum tarixi">
+                                    </div>
+                                </div>
+                                <div class="form-group cv-form-group col-md-6">
+                                    <div class="button-wrap form-control">
+                                        <label class ="new-button" for="upload">
+                                            <img src="img/input-5.svg" class="pr-2" alt="">
+                                            <span class="cv-inner">Profil şəkili</span>
+                                            <input id="upload" class="input-upload" type="file" required>
+                                        </label>
+                                        <span class="cv-delete"><i class="fa fa-close"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 form-group">
+                                    <select class="nice-select js-nice-select">
+                                        <option value="1">Cinsi</option>
+                                        <option value="2">Kishi</option>
+                                        <option value="3">Qadin</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-lg-6 form-group">
+                                    <select class="nice-select js-nice-select category-select">
+                                        <option value="1">Unvan</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3">A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-lg-6 form-group drop-category">
+                                    <select class="nice-select js-nice-select">
+                                        <option value="1">Alt kategoria</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3">A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 form-group">
+                                    <div class="regist-multi">
+                                        <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+
+
+                                <div class="col-12 col-md-6 form-group">
+                                    <div class="pass">
+                                        <input id="password" type="password" class="form-control pass-eye" placeholder="Şifrə">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 form-group">
+                                    <div class="pass">
+                                        <input id="confirm_password" type="password" class="form-control pass-eye" placeholder="Şifrənin təkrarı">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-registration">QEYDIYYAT</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+<script>
+    $('#password, #confirm_password').on('keyup', function () {
+        if ($('#password').val() == $('#confirm_password').val()) {
+            $('#message').addClass('d-none')
+        } else
+            $('#message').removeClass('d-none')
+    });
+
+    // $(".nice-search").click(function() {
+    //     $(this).find('.list').css('top', '90px');
+    //     if (!$(this).find('.nice-select').hasClass('open')){
+    //         $(this).append('<input type="text" class="form-control search-select" placeholder="Axtar">\n');
+    //     }
+    //     else{
+    //         $(".search-select").remove()
+    //     }
+    //
+    //     $(".search-select").click(function () {
+    //         $(this).parent().find('div').addClass('open');
+    //         console.log(2345678)
+    //     });
+    // });
+
+        
+    $(document).ready(function() {
+        $('.js-example-basic-multiple').select2({
+             placeholder: "Peshe",
+        });
+    });
+
+
+
+    $(".toggle-password").click(function() {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $(this).parent().find('.pass-eye');
+        if (input.attr("type") == "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+    });
+</script>
+
+
+
+<script>
+
+    $(document).ready(function() {
+
+        $(".aze-select").change(function () {
+
+            if ($(this).parent().find("div.aze-select .list li.selected").attr('data-value') == 1) {
+                $('.aze-numbers').val("").attr('maxlength','9');
+            } else if ($(this).parent().find("div.aze-select .list li.selected").attr('data-value') == 2) {
+                $('.aze-numbers').val("").attr('maxlength','7');
+            } else {
+                $('.aze-numbers').val("").attr('maxlength','0');
+            }
+        });
+
+        $(".check-required").change(function () {
+
+            if ($(this).parent().find("div.aze-select .list li.selected").attr('data-value') == 50) {
+                $(".check-required").addClass('aue')
+
+            }
+        });
+
+        $(".citizen-select").change(function () {
+
+            if ($(this).parent().find("div.citizen-select .list li.selected").attr('data-value') == 1) {
+
+                $('.aze-citizen').removeClass('d-none').addClass('d-block');
+                $('.no-aze-citizen').removeClass('d-block').addClass('d-none');
+
+            }
+
+            else if ($(this).parent().find("div.citizen-select .list li.selected").attr('data-value') == number) {
+                $('.aze-numbers').val("").removeAttr("required");
+                $('.fin-numbers').val("").removeAttr("required");
+
+                $('.aze-citizen').removeClass('d-block').addClass('d-none');
+                $('.no-aze-citizen').removeClass('d-none').addClass('d-block');
+
+                console.log(1111111)
+            }
+
+        });
+
+    })
+
+   $(document).ready(function() {
+
+        $('.drop-category').hide()
+
+        $(".category-select").change(function() {
+                console.log(this)
+                if ($(this).parent().find("div.category-select .list li.selected").attr('data-value') > 1){
+                    $(this).parent().parent().parent().find('.drop-category').show()
+                }
+                else {
+                    $(this).parent().parent().parent().find('.drop-category').hide()
+                }
+        });
+
+    })
+
+
+    var today = new Date()
+    var year = today.getFullYear()
+    var month = today.getMonth()
+    var day = today.getDate()
+    var finalDate = new Date(year - 18, month, day)
+
+    var date = $('[data-id="date"]');
+    var locale = $('html').attr('lang');
+
+    // Date
+    date.each(function () {
+        var _this = $(this);
+
+        _this.flatpickr({
+            "locale": locale,
+            altInput: true,
+            altFormat: "F j, Y",
+            dateFormat: "Y-m-d",
+            disableMobile: true,
+            maxDate: finalDate
+        });
+    });
+
+
+</script>
+
+
+<script>
+
+</script>
+

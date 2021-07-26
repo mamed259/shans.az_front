@@ -1,0 +1,159 @@
+---
+title: Title Page
+---
+
+<section class="section section-calculate" style="background-image: url(content/employee.jpg);">
+    <div class="container calc">
+        <div class="row">
+            <div class="col-12">
+                <form class="form form-calculate main-calculate">
+                    <p class="form-title">Для любой задачи есть профи</p>
+                    <div class="form-row">
+                        <div class="col-12 col-lg-5 form-group">
+                            <select class="nice-select js-nice-select type-select">
+                                <option value="1">Peshe</option>
+                                <option value="2">Another option</option>
+                                <option value="3">A disabled option</option>
+                                <option value="4">Potato</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-5 form-group">
+                            <select class="nice-select js-nice-select category-select">
+                                <option value="1">Unvan</option>
+                                <option value="2">Another option</option>
+                                <option value="3">A disabled option</option>
+                                <option value="4">Potato</option>
+                            </select>
+                        </div> 
+                        <div class="col-12 col-lg-2 form-group">
+                            <button class="btn btn-calculate">Axtar</button>
+                        </div>
+                        <div class="col-12 col-lg-5 form-group type-category">
+                            <select class="nice-select js-nice-select">
+                                <option value="1">Alt kategoriya</option>
+                                <option value="2">Another option</option>
+                                <option value="3">A disabled option</option>
+                                <option value="4">Potato</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-5 form-group drop-category">
+                            <select class="nice-select js-nice-select">
+                                <option value="1">Alt kategoriya</option>
+                                <option value="2">Another option</option>
+                                <option value="3">A disabled option</option>
+                                <option value="4">Potato</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-category">   
+    <div class="container">
+        <h1 class="title-category">Lorem ipsum dolor sit amet.</h1>
+        <p class="text-category">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+             <div class="col-md-6">
+                        <div class="main-category-box js-main-category-box">
+                            <a href="#" class="list-title">
+                                Репетиторы <span class="list-helper">(1224)</span>
+                            </a>
+                            <ul class="list list-category">
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="main-category-box js-main-category-box">
+                            <a href="#" class="list-title">
+                                Мастера по ремонту <span class="list-helper">(1224)</span>
+                            </a>
+                            <ul class="list list-category">
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="main-category-box js-main-category-box">
+                            <a href="#" class="list-title">
+                                Фрилансеры <span class="list-helper">(1224)</span>
+                            </a>
+                            <ul class="list list-category">
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="main-category-box js-main-category-box">
+                            <a href="#" class="list-title">
+                                Бухгалтеры и юристы <span class="list-helper">(1224)</span>
+                            </a>
+                            <ul class="list list-category">
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                                <li><a href="#">Lorem ipsum dolor sit. <span class="list-helper">(1704)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+        </div>
+
+
+    </div>
+</section>
+
+<div class="container">
+    <img src="content/emp-2.png" class="w-100" alt="">
+</div>
+
+
+<script>
+    $(document).ready(function() {
+
+        $('.drop-category').hide()
+        $('.type-category').hide()
+
+        $(".category-select").change(function() {
+            if ($(this).parent().find("div.category-select .list li.selected").attr('data-value') > 1){
+                $(this).parent().parent().parent().find('.drop-category').show()
+            }
+            else {
+                $(this).parent().parent().parent().find('.drop-category').hide()
+            }
+        });
+
+        $(".type-select").change(function() {
+            if ($(this).parent().find("div.type-select .list li.selected").attr('data-value') > 1){
+                $(this).parent().parent().parent().find('.type-category').show()
+            }
+            else {
+                $(this).parent().parent().parent().find('.type-category').hide()
+            }
+        });
+
+        $(".js-main-category-box").click(function (e){
+            e.preventDefault();
+            $(this).parent().find('.main-category-box').toggleClass('active')
+
+        });
+
+
+    })
+</script>
+

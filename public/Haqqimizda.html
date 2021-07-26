@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="tags for website">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#ffffff">
+    <title> Haqqimizda </title>
+    
+    <!-- injector:css -->
+    <link rel="stylesheet" href="css/design.min.css">
+    
+    <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
+    
+    
+    <!-- endinjector -->
+    
+    <!-- injector:js -->
+    <script src="js/min/assets/jquery.min.js"></script>
+    <script src="js/min/assets/bootstrap.min.js"></script>
+    <script src="js/min/assets/flatpickr.min.js"></script>
+    <script src="js/min/assets/dropzone.min.js"></script>
+    <script src="js/min/assets/jquery.nice-select.min.js"></script>
+    <script src="js/min/assets/jquery.fancybox.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script src="js/min/app.min.js"></script>
+    
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav class="navbar navigation navbar-expand-lg">
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <button class="btn btn-user d-lg-none" data-toggle="modal" data-target="#modal_login">
+                <img src="img/user.svg" alt="">
+            </button>
+
+            <div class="collapse navbar-collapse mobile-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto navbar-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana sehife</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="haqqimizda.html">Haqqimizda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Elaqe</a>
+                    </li>
+                    <li class="d-none-down-md">
+                        <button type="button" class="btn btn-user" data-toggle="modal" data-target="#modal_login">
+                            <img src="img/user.svg" alt="">
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-logout" href="index.html">Cixish</a>
+                    </li>
+                </ul>
+<!--                <ul class="navbar-nav navbar-login">-->
+<!--                    <li>-->
+<!--                        <button type="button" class="btn btn-user" data-toggle="modal" data-target="#modal_login">-->
+<!--                            <img src="/img/user.svg" alt="">-->
+<!--                        </button>-->
+<!--                    </li>-->
+<!--                </ul>-->
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<!-- Login -->
+<div class="modal fade modal-login" id="modal_login" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Şəxsi kabinetə giriş</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form form-login">
+                    <div class="form-group">
+                        <label for="login_mail1">Email</label>
+                        <input type="email" class="form-control" id="login_mail1">
+                    </div>
+                    <div class="form-group">
+                        <label for="login_pass">Şifrə</label>
+                        <input type="password" class="form-control" id="login_pass">
+                    </div>
+                    <a href="#" class="forgot-pass" data-dismiss="modal" data-toggle="modal" data-target="#modal_forget_pass">Şifrəni unutmusan?</a>
+                    <a href="profile.html" type="submit" class="btn btn-login-modal mb-3">Daxil ol</a>
+                    <a href="registration.html" type="submit" class="btn btn-sign-up-modal">Qeydiyyatdan keç</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="section section-about">
+    <div class="container">
+        <h1 class="content-title">Haqqimizda</h1>
+        <div class="row">
+            <div class="col-lg-10">
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis fugit hic ipsam ipsum itaque odit perspiciatis quae, totam voluptatibus!</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum excepturi impedit, praesentium quam quia repellat sapiente. Accusamus ad culpa deserunt dolore earum eligendi eos error ex facere, hic impedit laboriosam libero maiores modi neque pariatur perspiciatis placeat quia recusandae rerum similique sint sunt veritatis! Excepturi, reiciendis, voluptas? Aut dolorem, vitae.</p>
+                </article>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Lorem 1</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Lorem 2</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            lorem
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg">
+                <p class="f-list-title">Əlaqə</p>
+                <ul class="f-list">
+                    <li>
+                        <a href="#">
+                            Ünvan və telefonlar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Online müraciət
+                        </a>
+                    </li>
+                </ul>
+                <ul class="f-list-social">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-rss-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="f-bottom">
+        © 2021 shans.az
+    </div>
+</footer>
+</body>
+</html>

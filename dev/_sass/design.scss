@@ -1,0 +1,90 @@
+/*  Imported styles
+----------------------------------------------------*/
+@import "compass";
+@import "_bootstrap/bootstrap";
+
+
+
+// Utilities
+@import "_utilities/mixins";
+// Molecules
+@import "_molecules/icons";
+
+
+/* Font families */
+@each $slug, $fonts in
+        (open-semibold, 'Open Sans SemiBold'),
+        (open-bold, 'Roboto-Bold'),
+        (open-regular, 'Roboto'),
+        (azn, 'AZN'), {
+  .font-#{$slug} {
+    font-family: "#{$fonts}", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+
+// ******************************
+// Import template styles
+// ******************************
+
+@import "_plugins/font-awesome";
+@import "_plugins/nice-select";
+@import "_plugins/flatpickr";
+@import "_plugins/select2";
+@import "_plugins/dropzone";
+@import "_plugins/jquery.fancybox";
+
+// Atoms
+@import "_atoms/buttons";
+@import "_atoms/code";
+@import "_atoms/forms";
+@import "_atoms/helperclasses";
+@import "_atoms/images";
+@import "_atoms/responsiveutilities";
+@import "_atoms/tables";
+@import "_atoms/typography";
+
+//Boostrap Components
+@import "_bootstrapcomponents/alerts";
+@import "_bootstrapcomponents/badges";
+@import "_bootstrapcomponents/breadcrumbs";
+@import "_bootstrapcomponents/buttondropdowns";
+@import "_bootstrapcomponents/buttongroups";
+@import "_bootstrapcomponents/cards";
+@import "_bootstrapcomponents/dropdowns";
+@import "_bootstrapcomponents/inputgroups";
+@import "_bootstrapcomponents/jumbotron";
+@import "_bootstrapcomponents/labels";
+@import "_bootstrapcomponents/listgroup";
+@import "_bootstrapcomponents/media";
+@import "_bootstrapcomponents/navbar";
+@import "_bootstrapcomponents/navs";
+@import "_bootstrapcomponents/pageheader";
+@import "_bootstrapcomponents/panels";
+@import "_bootstrapcomponents/progressbars";
+@import "_bootstrapcomponents/responsiveembed";
+@import "_bootstrapcomponents/thumbnails";
+@import "_bootstrapcomponents/wells";
+
+// Quarks
+@import "_quarks/fonts";
+@import "_quarks/links";
+@import "_quarks/lists";
+@import "_quarks/paragraphs";
+@import "_quarks/tables";
+
+// Base structture
+@import "_base/_header";
+@import "_base/_footer";
+@import "_base/_ui-view";
+
+// For project ui
+@import "project-ui";
+
+
+
+
+
+// ******************************
+// Import other styles
+// ******************************
+@import "style";

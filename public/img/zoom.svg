@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.357 31.528">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="zoom-in" transform="translate(-0.983)">
+    <path id="Path_1292" data-name="Path 1292" class="cls-1" d="M22.912,17.167H19.34V13.6a.6.6,0,1,0-1.191,0v3.572H14.578a.6.6,0,1,0,0,1.191H18.15v3.572a.6.6,0,1,0,1.191,0V18.357h3.572a.6.6,0,1,0,0-1.191Z" transform="translate(-5.262 -5.262)"/>
+    <path id="Path_1293" data-name="Path 1293" class="cls-1" d="M31.175,30.52l-8.845-9.2a12.51,12.51,0,1,0-.88.8l8.866,9.221a.6.6,0,1,0,.858-.825Zm-29-18.02a11.31,11.31,0,1,1,11.31,11.31A11.322,11.322,0,0,1,2.174,12.5Z" transform="translate(0)"/>
+  </g>
+</svg>
